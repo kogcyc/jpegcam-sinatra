@@ -1,0 +1,45 @@
+<!doctype html>
+
+<head>
+
+</head>
+<body style="background-color: #d03000;">
+
+	<script type="text/javascript" src="webcam.js"></script>
+	
+	<!-- Configure a few settings -->
+	<script language="JavaScript">
+		webcam.set_api_url( 'http://localhost:4567/data' );
+		webcam.set_quality( 100 ); // JPEG quality (1 - 100)
+		webcam.set_shutter_sound( true ); // play shutter click sound
+	</script>
+	
+	<!-- Next, display the preview on the page -->
+	<script language="JavaScript">
+		document.write( webcam.get_html(320,240) );
+	</script>
+	
+	<!-- Some buttons for controlling things -->
+	<br/><form>
+		<input type=button value="Configure..." onClick="webcam.configure()">
+		&nbsp;&nbsp;
+		<input type=button value="Take Snapshot" onClick="take_snapshot()">
+	</form>
+	
+	<!-- Code to handle the server response -->
+	<script language="JavaScript">
+		webcam.set_hook( 'onComplete', 'my_completion_handler' );
+		
+		function take_snapshot() {
+			// take snapshot and upload to server
+			webcam.snap();
+		}
+		
+		function my_completion_handler(msg) {
+			alert(msg);
+			webcam.reset();
+		}
+	</script>
+	
+</body>
+</html>
