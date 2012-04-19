@@ -1,4 +1,4 @@
-# myapp.rb
+
 require 'sinatra'
 
 post '/data' do
