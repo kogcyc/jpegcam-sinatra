@@ -3,7 +3,8 @@
 <head>
 
 </head>
-<body style="background-color: #d03000;">
+
+<body style="background-color: #808080;">
 
 	<script type="text/javascript" src="webcam.js"></script>
 	
@@ -15,15 +16,17 @@
 	</script>
 	
 	<!-- Next, display the preview on the page -->
+	<!-- Note that the camera's image will be displayed in 320x240 -->
+	<!-- and then uploaded in 640x480 -->
 	<script language="JavaScript">
-		document.write( webcam.get_html(320,240) );
+		document.write( webcam.get_html(320, 240, 640, 480) );
 	</script>
 	
 	<!-- Some buttons for controlling things -->
 	<br/><form>
 		<input type=button value="Configure..." onClick="webcam.configure()">
 		&nbsp;&nbsp;
-		<input type=button value="Take Snapshot" onClick="take_snapshot()">
+		<input type=button value="Upload" onClick="take_snapshot()">
 	</form>
 	
 	<!-- Code to handle the server response -->

@@ -14,5 +14,8 @@ Then browse this url:
 
     http://localhost:4567/test.html
 
+Each time the ***Upload*** button is pressed, the image from the webcam will be written to a file named ***test.jpeg***.
 
   [1]: http://code.google.com/p/jpegcam/
+
+
