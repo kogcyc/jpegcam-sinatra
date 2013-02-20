@@ -1,4 +1,4 @@
-###jpegcamsinatra
+###jpegcam-sinatra
 
 Welcome!
 
