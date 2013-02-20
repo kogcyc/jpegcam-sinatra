@@ -1,7 +1,5 @@
 ###jpegcam-sinatra
 
-Welcome!
-
 This is a tiny Sinatra app that is designed to run on your local host and test Joseph Huckaby's **[jpegcam][1]** Javascript library.
 
 ###Running
